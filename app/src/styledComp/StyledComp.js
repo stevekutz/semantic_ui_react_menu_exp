@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import jungle from '../background_jungle_01.png';
 
 const BannerDiv = styled.div`  
     
@@ -23,20 +24,19 @@ const NavDiv = styled.div`
 `;
 
 const MainDiv = styled.div`
-    backgroundImage: "url(https://dribbble.com/shots/3661988-Jungle)";
-    backgroundPosition: 'center';
-    backgroundSize: 'cover';
-    backgroundRepeat: 'no-repeat';
-    width: '90%';
-    margin: "5px auto";
-    position: "absolute";
-    zIndex : "-1";
+    marginTop: 70px;
+    background-image: url(${jungle});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 90%;
+    margin: 5px auto;
+    position: absolute;
+    zIndex : -1;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-
-
 `;
 
 
