@@ -11,17 +11,8 @@ function NavBar() {
     
 
   return (
-    <div className="App" style = {{ 
-            border: '1px solid deeppink',
-            width: '90%'
-        }}>
-        <Segment
-            //style = {{border: '4px solid darkblue'}}
-            
-            //textAlign='center'
-            //style={{ minHeight: 700, padding: '1em 0em' }}
-            //vertical
-        > 
+    <div>
+
         
         <Menu
             fixed={fixed ? 'top' : null}
@@ -58,7 +49,7 @@ function NavBar() {
             </NavDiv>
         </Menu>
             
-    </Segment>
+
     </div>
   );
 }
