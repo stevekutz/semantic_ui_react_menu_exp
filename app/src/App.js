@@ -1,5 +1,10 @@
 import React, {useState} from 'react';
 import NavBar from './nav/NavBar';
+import jungle from './background_jungle_01.png';
+
+import {
+    MainDiv
+} from './styledComp/StyledComp';
 
 
 function App() {
@@ -7,7 +12,7 @@ function App() {
 
 
   return (
-    <div>
+    <div style = {{width: "80%", margin: '10px auto'}}>
         <NavBar/>
 
     </div>

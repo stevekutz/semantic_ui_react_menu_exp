@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
-import  {Button, Container, Label, Menu, Segment} from 'semantic-ui-react';
+import  {Button, Container, Label, Menu, Segment, Dropdown} from 'semantic-ui-react';
 import {
     BannerDiv,
+    NavDiv
 } from '../styledComp/StyledComp';
 
 
@@ -12,14 +13,14 @@ function NavBar() {
   return (
     <div className="App" style = {{ 
             border: '1px solid deeppink',
-            backgroundColor: 'seagreen'
+            width: '90%'
         }}>
         <Segment
-            style = {{border: '4px solid darkblue'}}
+            //style = {{border: '4px solid darkblue'}}
             
-            textAlign='center'
-            style={{ minHeight: 700, padding: '1em 0em' }}
-            vertical
+            //textAlign='center'
+            //style={{ minHeight: 700, padding: '1em 0em' }}
+            //vertical
         > 
         
         <Menu
@@ -31,26 +32,38 @@ function NavBar() {
             position = 'right'
         >
             <BannerDiv> Djungle Maze</BannerDiv>
-            <Container style = {{border: '1px solid black', width: '50%'}}>
-                <Menu.Item as='a' active>
-                Home
-                </Menu.Item>
-                <Menu.Item as='a'>About</Menu.Item>
-                <Menu.Item as='a'>Active Players</Menu.Item>
-                <Menu.Item as='a'>All Players</Menu.Item>
-                <Menu.Item position='right'>
-                <Button as='a' inverted={!fixed}>
+            <NavDiv>
+                <Button style = {{backgroundColor: '#00b377'}}>
                     Log in
                 </Button>
-                <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
+                <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em', marginRight: '5.5em' }}>
                     Sign Up
                 </Button>
-                </Menu.Item>
-            </Container>
+                
+                <Dropdown text = 'Player Info' button>    
+                    <Dropdown.Menu>
+                    <Menu.Item as='a' active>
+                    Home
+                    </Menu.Item>
+                    <Menu.Item as='a'>Active Players</Menu.Item>
+                    <Menu.Item as='a'>All Players</Menu.Item>
+                    <Menu.Item position='right'>
+                    </Menu.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
+                <Button style = {{backgroundColor: '#ffcc00'}}>
+                    About
+                </Button>
+
+            </NavDiv>
         </Menu>
+            
     </Segment>
     </div>
   );
 }
 
 export default NavBar;
+
+// #ffcc00
+// #66b3ff
