@@ -1,21 +1,8 @@
 import React, {useState} from 'react';
 import  {Button, Container, Label, Menu, Segment} from 'semantic-ui-react';
-// import {
-//     BannerDiv,
-// } from '../styledComp/StyledComp';
-import styled from 'styled-components';
-const BannerDiv = styled.div`
-    
-    border: '1px solid blue',
-    width: '30%',
-    display: 'flex',
-    fontSize: '40px',
-    textAlign: 'center',
-    justifyContent: 'center',
-    alignItems: 'center',
-
-
-`;
+import {
+    BannerDiv,
+} from '../styledComp/StyledComp';
 
 
 function NavBar() {
@@ -43,8 +30,7 @@ function NavBar() {
             size='large'
             position = 'right'
         >
-            <div style = {{border: '1px solid blue' , width: '30%', display: 'flex', fontSize: '40px', 
-            textAlign: 'center', justifyContent: 'center', alignItems: 'center'}}> Djungle Maze</div>
+            <BannerDiv> Djungle Maze</BannerDiv>
             <Container style = {{border: '1px solid black', width: '50%'}}>
                 <Menu.Item as='a' active>
                 Home
